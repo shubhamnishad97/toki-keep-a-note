@@ -1,13 +1,30 @@
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext, loader
-from django.http import HttpResponse
-from .models import Notes
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
+from django.core.urlresolvers import reverse
+from .models import Notes, Tag
+from notes.forms import NoteForm
  
 # Create your views here.
  
-def notes(request):
-    notes = Notes.objects
-    template = loader.get_template('notes.html')
-    context = {'notes': notes}
-    return render(request, 'notes.html', context)
-    #return render_to_response("note.html", notes)
+
+
+def index_view(request):
+	notes = Notes.objects.all()
+	return render(request, 'notes.html', {'notes':notes})
+
+
+def add_note(request):
+	
+	if request.method == 'POST':
+		form = NoteForm(request.POST)
+		if form.is_valid():
+			form.save()
+			messages.add_message(request, messages.INFO, 'Note Added!')
+			return HttpResponseRedirect(reverse('notes:index'))
+	
+	else:
+		form = NoteForm()
+		
+	return render(request, 'addnote.html', {'form':form})

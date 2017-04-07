@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="jumbotron">
+	<h1 align='center'>Notes!</h1>
+</div>
+
+
+
+<div class='col-md-12'>
+{% if notes %}
+	{% for note in notes %}
+	<h3 class="page-header">{{note.label}}</h3>
+	{{note.body|linebreaks}}
+		{% for tag in note.tags.all %}
+		{{tag}}{% if not forloop.last %} | {% endif %}
+		{% endfor %}
+	{% endfor %}
+{% else %}
+	<div class='alert alert-warning' align='center'>
+		<h3>No Notes Yet!</h3>
+	</div>
+{% endif %}
+</div>
+
+
+
+{% endblock body %}
