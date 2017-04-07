@@ -12,7 +12,7 @@ from notes.forms import NoteForm
 
 def index_view(request):
 	notes = Notes.objects.all()
-	return render(request, 'notes.html', {'notes':notes})
+	return render(request, 'notesIndex.html', {'notes':notes})
 
 
 def add_note(request):

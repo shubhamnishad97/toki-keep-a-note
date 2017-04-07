@@ -4,6 +4,24 @@
 	<title></title>
 </head>
 <body>
-KDADAD
+{% block body %}
+
+
+<div class="jumbotron">
+	<h1 align='center'>Create New Note!</h1>
+</div>
+
+
+
+<div class='col-md-12'>
+	<form action="" method="post">{% csrf_token %}
+	{{form.as_p}}
+	<input type='submit' value='Create New Note!' class='btn btn-primary btn-lg btn-block' />
+	</form>
+</div>
+
+
+
+{% endblock body %}
 </body>
 </html>
