@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+{% extends 'notesBase.html' %}
+{% load static %}
 {% block body %}
-
 
 <div class="jumbotron">
 	<h1 align='center'>Create New Note!</h1>
@@ -20,8 +15,18 @@
 	</form>
 </div>
 
+{% if note %}
+<div class="col-md-12" style="padding-top:15px">
+    <form action="" method="POST">{% csrf_token %}
+    <input type="hidden" name="control" value="delete" />
+    <input type="submit" value="Delete" class="btn btn-lg btn-block btn-danger" />
+    </form>
+</div>
+{% endif %}
 
+<script type='text/javascript'>
+$('input[type="text"]').addClass('form-control');
+$('textarea').addClass('form-control');
+</script>
 
 {% endblock body %}
-</body>
-</html>
