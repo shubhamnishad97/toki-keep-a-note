@@ -19299,3 +19299,484 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<Reg
             ORDER BY name; args=None
 [08/Apr/2017 21:48:57] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 >>>>>>> refs/remotes/origin/master
+[08/Apr/2017 21:55:15] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[08/Apr/2017 21:55:15] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[08/Apr/2017 21:55:24] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 13750
+[08/Apr/2017 21:55:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'tag' in template 'bootstrap3/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'True\': True, \'False\': False, \'None\': None, \'csrf_token\': <SimpleLazyObject: \'lIaXKLek4eLi5TsBM6WLOQTVeuwIkZHwjrHbspVK5kHZzT6ynAbVlUAHKv0wTo4Q\'>, \'user\': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000021D5F62F358>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021D5F62FF60>, \'debug\': True, \'sql_queries\': <function debug.<locals>.<lambda> at 0x0000021D5F64C488>, \'LANGUAGES\': [(\'af\', \'Afrikaans\'), (\'ar\', \'Arabic\'), (\'ast\', \'Asturian\'), (\'az\', \'Azerbaijani\'), (\'bg\', \'Bulgarian\'), (\'be\', \'Belarusian\'), (\'bn\', \'Bengali\'), (\'br\', \'Breton\'), (\'bs\', \'Bosnian\'), (\'ca\', \'Catalan\'), (\'cs\', \'Czech\'), (\'cy\', \'Welsh\'), (\'da\', \'Danish\'), (\'de\', \'German\'), (\'dsb\', \'Lower Sorbian\'), (\'el\', \'Greek\'), (\'en\', \'English\'), (\'en-au\', \'Australian English\'), (\'en-gb\', \'British English\'), (\'eo\', \'Esperanto\'), (\'es\', \'Spanish\'), (\'es-ar\', \'Argentinian Spanish\'), (\'es-co\', \'Colombian Spanish\'), (\'es-mx\', \'Mexican Spanish\'), (\'es-ni\', \'Nicaraguan Spanish\'), (\'es-ve\', \'Venezuelan Spanish\'), (\'et\', \'Estonian\'), (\'eu\', \'Basque\'), (\'fa\', \'Persian\'), (\'fi\', \'Finnish\'), (\'fr\', \'French\'), (\'fy\', \'Frisian\'), (\'ga\', \'Irish\'), (\'gd\', \'Scottish Gaelic\'), (\'gl\', \'Galician\'), (\'he\', \'Hebrew\'), (\'hi\', \'Hindi\'), (\'hr\', \'Croatian\'), (\'hsb\', \'Upper Sorbian\'), (\'hu\', \'Hungarian\'), (\'ia\', \'Interlingua\'), (\'id\', \'Indonesian\'), (\'io\', \'Ido\'), (\'is\', \'Icelandic\'), (\'it\', \'Italian\'), (\'ja\', \'Japanese\'), (\'ka\', \'Georgian\'), (\'kk\', \'Kazakh\'), (\'km\', \'Khmer\'), (\'kn\', \'Kannada\'), (\'ko\', \'Korean\'), (\'lb\', \'Luxembourgish\'), (\'lt\', \'Lithuanian\'), (\'lv\', \'Latvian\'), (\'mk\', \'Macedonian\'), (\'ml\', \'Malayalam\'), (\'mn\', \'Mongolian\'), (\'mr\', \'Marathi\'), (\'my\', \'Burmese\'), (\'nb\', \'Norwegian Bokmål\'), (\'ne\', \'Nepali\'), (\'nl\', \'Dutch\'), (\'nn\', \'Norwegian Nynorsk\'), (\'os\', \'Ossetic\'), (\'pa\', \'Punjabi\'), (\'pl\', \'Polish\'), (\'pt\', \'Portuguese\'), (\'pt-br\', \'Brazilian Portuguese\'), (\'ro\', \'Romanian\'), (\'ru\', \'Russian\'), (\'sk\', \'Slovak\'), (\'sl\', \'Slovenian\'), (\'sq\', \'Albanian\'), (\'sr\', \'Serbian\'), (\'sr-latn\', \'Serbian Latin\'), (\'sv\', \'Swedish\'), (\'sw\', \'Swahili\'), (\'ta\', \'Tamil\'), (\'te\', \'Telugu\'), (\'th\', \'Thai\'), (\'tr\', \'Turkish\'), (\'tt\', \'Tatar\'), (\'udm\', \'Udmurt\'), (\'uk\', \'Ukrainian\'), (\'ur\', \'Urdu\'), (\'vi\', \'Vietnamese\'), (\'zh-hans\', \'Simplified Chinese\'), (\'zh-hant\', \'Traditional Chinese\')], \'LANGUAGE_CODE\': \'en-us\', \'LANGUAGE_BIDI\': False, \'MEDIA_URL\': \'/media/\', \'STATIC_URL\': \'/static/\', \'TIME_ZONE\': \'India Standard Time\', \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021D5F62F438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}, \'form\': <LoginForm bound=False, valid=Unknown, fields=(username;password;remember_me)>, \'view\': <accounts.views.LoginView object at 0x0000021D5F62FA20>, \'site\': <django.contrib.sites.requests.RequestSite object at 0x0000021D5F62FCF8>, \'site_name\': \'127.0.0.1:8000\', \'next\': \'\', \'block\': <Block Node: form. Contents: [<TextNode: \'\\n  \'>, <crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode object at 0x0000021D5F63CC88>, <TextNode: \'\\n\\n  <div class="form-mess\'>, <django.template.defaulttags.URLNode object at 0x0000021D5F63CD30>, <TextNode: \'">Sign up</a>.\\n    </p>\\n \'>]>, \'template_pack\': \'bootstrap3\', \'form_action\': \'\', \'form_method\': \'post\', \'form_tag\': True, \'form_class\': \'\', \'form_id\': \'\', \'form_style\': \'\', \'form_error_title\': None, \'formset_error_title\': None, \'form_show_errors\': True, \'help_text_inline\': False, \'html5_required\': False, \'form_show_labels\': True, \'disable_csrf\': False, \'inputs\': [], \'is_formset\': False, \'form_attrs\': {}, \'flat_attrs\': \' placeholder="Enter Email" autofocus=""\', \'error_text_inline\': True, \'label_class\': \'\', \'label_size\': 0, \'field_class\': \'\', \'include_media\': True, \'attrs\': {}, \'field\': <django.forms.boundfield.BoundField object at 0x0000021D5F668208>, \'labelclass\': None, \'wrapper_class\': None}]'
+[08/Apr/2017 21:55:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'tag' in template 'bootstrap3/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'True\': True, \'False\': False, \'None\': None, \'csrf_token\': <SimpleLazyObject: \'lIaXKLek4eLi5TsBM6WLOQTVeuwIkZHwjrHbspVK5kHZzT6ynAbVlUAHKv0wTo4Q\'>, \'user\': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000021D5F62F358>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021D5F62FF60>, \'debug\': True, \'sql_queries\': <function debug.<locals>.<lambda> at 0x0000021D5F64C488>, \'LANGUAGES\': [(\'af\', \'Afrikaans\'), (\'ar\', \'Arabic\'), (\'ast\', \'Asturian\'), (\'az\', \'Azerbaijani\'), (\'bg\', \'Bulgarian\'), (\'be\', \'Belarusian\'), (\'bn\', \'Bengali\'), (\'br\', \'Breton\'), (\'bs\', \'Bosnian\'), (\'ca\', \'Catalan\'), (\'cs\', \'Czech\'), (\'cy\', \'Welsh\'), (\'da\', \'Danish\'), (\'de\', \'German\'), (\'dsb\', \'Lower Sorbian\'), (\'el\', \'Greek\'), (\'en\', \'English\'), (\'en-au\', \'Australian English\'), (\'en-gb\', \'British English\'), (\'eo\', \'Esperanto\'), (\'es\', \'Spanish\'), (\'es-ar\', \'Argentinian Spanish\'), (\'es-co\', \'Colombian Spanish\'), (\'es-mx\', \'Mexican Spanish\'), (\'es-ni\', \'Nicaraguan Spanish\'), (\'es-ve\', \'Venezuelan Spanish\'), (\'et\', \'Estonian\'), (\'eu\', \'Basque\'), (\'fa\', \'Persian\'), (\'fi\', \'Finnish\'), (\'fr\', \'French\'), (\'fy\', \'Frisian\'), (\'ga\', \'Irish\'), (\'gd\', \'Scottish Gaelic\'), (\'gl\', \'Galician\'), (\'he\', \'Hebrew\'), (\'hi\', \'Hindi\'), (\'hr\', \'Croatian\'), (\'hsb\', \'Upper Sorbian\'), (\'hu\', \'Hungarian\'), (\'ia\', \'Interlingua\'), (\'id\', \'Indonesian\'), (\'io\', \'Ido\'), (\'is\', \'Icelandic\'), (\'it\', \'Italian\'), (\'ja\', \'Japanese\'), (\'ka\', \'Georgian\'), (\'kk\', \'Kazakh\'), (\'km\', \'Khmer\'), (\'kn\', \'Kannada\'), (\'ko\', \'Korean\'), (\'lb\', \'Luxembourgish\'), (\'lt\', \'Lithuanian\'), (\'lv\', \'Latvian\'), (\'mk\', \'Macedonian\'), (\'ml\', \'Malayalam\'), (\'mn\', \'Mongolian\'), (\'mr\', \'Marathi\'), (\'my\', \'Burmese\'), (\'nb\', \'Norwegian Bokmål\'), (\'ne\', \'Nepali\'), (\'nl\', \'Dutch\'), (\'nn\', \'Norwegian Nynorsk\'), (\'os\', \'Ossetic\'), (\'pa\', \'Punjabi\'), (\'pl\', \'Polish\'), (\'pt\', \'Portuguese\'), (\'pt-br\', \'Brazilian Portuguese\'), (\'ro\', \'Romanian\'), (\'ru\', \'Russian\'), (\'sk\', \'Slovak\'), (\'sl\', \'Slovenian\'), (\'sq\', \'Albanian\'), (\'sr\', \'Serbian\'), (\'sr-latn\', \'Serbian Latin\'), (\'sv\', \'Swedish\'), (\'sw\', \'Swahili\'), (\'ta\', \'Tamil\'), (\'te\', \'Telugu\'), (\'th\', \'Thai\'), (\'tr\', \'Turkish\'), (\'tt\', \'Tatar\'), (\'udm\', \'Udmurt\'), (\'uk\', \'Ukrainian\'), (\'ur\', \'Urdu\'), (\'vi\', \'Vietnamese\'), (\'zh-hans\', \'Simplified Chinese\'), (\'zh-hant\', \'Traditional Chinese\')], \'LANGUAGE_CODE\': \'en-us\', \'LANGUAGE_BIDI\': False, \'MEDIA_URL\': \'/media/\', \'STATIC_URL\': \'/static/\', \'TIME_ZONE\': \'India Standard Time\', \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021D5F62F438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}, \'form\': <LoginForm bound=False, valid=False, fields=(username;password;remember_me)>, \'view\': <accounts.views.LoginView object at 0x0000021D5F62FA20>, \'site\': <django.contrib.sites.requests.RequestSite object at 0x0000021D5F62FCF8>, \'site_name\': \'127.0.0.1:8000\', \'next\': \'\', \'block\': <Block Node: form. Contents: [<TextNode: \'\\n  \'>, <crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode object at 0x0000021D5F63CC88>, <TextNode: \'\\n\\n  <div class="form-mess\'>, <django.template.defaulttags.URLNode object at 0x0000021D5F63CD30>, <TextNode: \'">Sign up</a>.\\n    </p>\\n \'>]>, \'template_pack\': \'bootstrap3\', \'form_action\': \'\', \'form_method\': \'post\', \'form_tag\': True, \'form_class\': \'\', \'form_id\': \'\', \'form_style\': \'\', \'form_error_title\': None, \'formset_error_title\': None, \'form_show_errors\': True, \'help_text_inline\': False, \'html5_required\': False, \'form_show_labels\': True, \'disable_csrf\': False, \'inputs\': [], \'is_formset\': False, \'form_attrs\': {}, \'flat_attrs\': \' placeholder="Enter Email" autofocus=""\', \'error_text_inline\': True, \'label_class\': \'\', \'label_size\': 0, \'field_class\': \'\', \'include_media\': True, \'attrs\': {}, \'field\': <django.forms.boundfield.BoundField object at 0x0000021D5F668208>, \'labelclass\': None, \'wrapper_class\': None}]'
+[08/Apr/2017 21:55:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'tag' in template 'bootstrap3/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'True\': True, \'False\': False, \'None\': None, \'csrf_token\': <SimpleLazyObject: \'lIaXKLek4eLi5TsBM6WLOQTVeuwIkZHwjrHbspVK5kHZzT6ynAbVlUAHKv0wTo4Q\'>, \'user\': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000021D5F62F358>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021D5F62FF60>, \'debug\': True, \'sql_queries\': <function debug.<locals>.<lambda> at 0x0000021D5F64C488>, \'LANGUAGES\': [(\'af\', \'Afrikaans\'), (\'ar\', \'Arabic\'), (\'ast\', \'Asturian\'), (\'az\', \'Azerbaijani\'), (\'bg\', \'Bulgarian\'), (\'be\', \'Belarusian\'), (\'bn\', \'Bengali\'), (\'br\', \'Breton\'), (\'bs\', \'Bosnian\'), (\'ca\', \'Catalan\'), (\'cs\', \'Czech\'), (\'cy\', \'Welsh\'), (\'da\', \'Danish\'), (\'de\', \'German\'), (\'dsb\', \'Lower Sorbian\'), (\'el\', \'Greek\'), (\'en\', \'English\'), (\'en-au\', \'Australian English\'), (\'en-gb\', \'British English\'), (\'eo\', \'Esperanto\'), (\'es\', \'Spanish\'), (\'es-ar\', \'Argentinian Spanish\'), (\'es-co\', \'Colombian Spanish\'), (\'es-mx\', \'Mexican Spanish\'), (\'es-ni\', \'Nicaraguan Spanish\'), (\'es-ve\', \'Venezuelan Spanish\'), (\'et\', \'Estonian\'), (\'eu\', \'Basque\'), (\'fa\', \'Persian\'), (\'fi\', \'Finnish\'), (\'fr\', \'French\'), (\'fy\', \'Frisian\'), (\'ga\', \'Irish\'), (\'gd\', \'Scottish Gaelic\'), (\'gl\', \'Galician\'), (\'he\', \'Hebrew\'), (\'hi\', \'Hindi\'), (\'hr\', \'Croatian\'), (\'hsb\', \'Upper Sorbian\'), (\'hu\', \'Hungarian\'), (\'ia\', \'Interlingua\'), (\'id\', \'Indonesian\'), (\'io\', \'Ido\'), (\'is\', \'Icelandic\'), (\'it\', \'Italian\'), (\'ja\', \'Japanese\'), (\'ka\', \'Georgian\'), (\'kk\', \'Kazakh\'), (\'km\', \'Khmer\'), (\'kn\', \'Kannada\'), (\'ko\', \'Korean\'), (\'lb\', \'Luxembourgish\'), (\'lt\', \'Lithuanian\'), (\'lv\', \'Latvian\'), (\'mk\', \'Macedonian\'), (\'ml\', \'Malayalam\'), (\'mn\', \'Mongolian\'), (\'mr\', \'Marathi\'), (\'my\', \'Burmese\'), (\'nb\', \'Norwegian Bokmål\'), (\'ne\', \'Nepali\'), (\'nl\', \'Dutch\'), (\'nn\', \'Norwegian Nynorsk\'), (\'os\', \'Ossetic\'), (\'pa\', \'Punjabi\'), (\'pl\', \'Polish\'), (\'pt\', \'Portuguese\'), (\'pt-br\', \'Brazilian Portuguese\'), (\'ro\', \'Romanian\'), (\'ru\', \'Russian\'), (\'sk\', \'Slovak\'), (\'sl\', \'Slovenian\'), (\'sq\', \'Albanian\'), (\'sr\', \'Serbian\'), (\'sr-latn\', \'Serbian Latin\'), (\'sv\', \'Swedish\'), (\'sw\', \'Swahili\'), (\'ta\', \'Tamil\'), (\'te\', \'Telugu\'), (\'th\', \'Thai\'), (\'tr\', \'Turkish\'), (\'tt\', \'Tatar\'), (\'udm\', \'Udmurt\'), (\'uk\', \'Ukrainian\'), (\'ur\', \'Urdu\'), (\'vi\', \'Vietnamese\'), (\'zh-hans\', \'Simplified Chinese\'), (\'zh-hant\', \'Traditional Chinese\')], \'LANGUAGE_CODE\': \'en-us\', \'LANGUAGE_BIDI\': False, \'MEDIA_URL\': \'/media/\', \'STATIC_URL\': \'/static/\', \'TIME_ZONE\': \'India Standard Time\', \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021D5F62F438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}, \'form\': <LoginForm bound=False, valid=False, fields=(username;password;remember_me)>, \'view\': <accounts.views.LoginView object at 0x0000021D5F62FA20>, \'site\': <django.contrib.sites.requests.RequestSite object at 0x0000021D5F62FCF8>, \'site_name\': \'127.0.0.1:8000\', \'next\': \'\', \'block\': <Block Node: form. Contents: [<TextNode: \'\\n  \'>, <crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode object at 0x0000021D5F63CC88>, <TextNode: \'\\n\\n  <div class="form-mess\'>, <django.template.defaulttags.URLNode object at 0x0000021D5F63CD30>, <TextNode: \'">Sign up</a>.\\n    </p>\\n \'>]>, \'template_pack\': \'bootstrap3\', \'form_action\': \'\', \'form_method\': \'post\', \'form_tag\': True, \'form_class\': \'\', \'form_id\': \'\', \'form_style\': \'\', \'form_error_title\': None, \'formset_error_title\': None, \'form_show_errors\': True, \'help_text_inline\': False, \'html5_required\': False, \'form_show_labels\': True, \'disable_csrf\': False, \'inputs\': [], \'is_formset\': False, \'form_attrs\': {}, \'flat_attrs\': \' placeholder="Enter Password"\', \'error_text_inline\': True, \'label_class\': \'\', \'label_size\': 0, \'field_class\': \'\', \'include_media\': True, \'attrs\': {}, \'field\': <django.forms.boundfield.BoundField object at 0x0000021D5F668320>, \'labelclass\': None, \'wrapper_class\': None}]'
+[08/Apr/2017 21:55:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'tag' in template 'bootstrap3/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'True\': True, \'False\': False, \'None\': None, \'csrf_token\': <SimpleLazyObject: \'lIaXKLek4eLi5TsBM6WLOQTVeuwIkZHwjrHbspVK5kHZzT6ynAbVlUAHKv0wTo4Q\'>, \'user\': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000021D5F62F358>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021D5F62FF60>, \'debug\': True, \'sql_queries\': <function debug.<locals>.<lambda> at 0x0000021D5F64C488>, \'LANGUAGES\': [(\'af\', \'Afrikaans\'), (\'ar\', \'Arabic\'), (\'ast\', \'Asturian\'), (\'az\', \'Azerbaijani\'), (\'bg\', \'Bulgarian\'), (\'be\', \'Belarusian\'), (\'bn\', \'Bengali\'), (\'br\', \'Breton\'), (\'bs\', \'Bosnian\'), (\'ca\', \'Catalan\'), (\'cs\', \'Czech\'), (\'cy\', \'Welsh\'), (\'da\', \'Danish\'), (\'de\', \'German\'), (\'dsb\', \'Lower Sorbian\'), (\'el\', \'Greek\'), (\'en\', \'English\'), (\'en-au\', \'Australian English\'), (\'en-gb\', \'British English\'), (\'eo\', \'Esperanto\'), (\'es\', \'Spanish\'), (\'es-ar\', \'Argentinian Spanish\'), (\'es-co\', \'Colombian Spanish\'), (\'es-mx\', \'Mexican Spanish\'), (\'es-ni\', \'Nicaraguan Spanish\'), (\'es-ve\', \'Venezuelan Spanish\'), (\'et\', \'Estonian\'), (\'eu\', \'Basque\'), (\'fa\', \'Persian\'), (\'fi\', \'Finnish\'), (\'fr\', \'French\'), (\'fy\', \'Frisian\'), (\'ga\', \'Irish\'), (\'gd\', \'Scottish Gaelic\'), (\'gl\', \'Galician\'), (\'he\', \'Hebrew\'), (\'hi\', \'Hindi\'), (\'hr\', \'Croatian\'), (\'hsb\', \'Upper Sorbian\'), (\'hu\', \'Hungarian\'), (\'ia\', \'Interlingua\'), (\'id\', \'Indonesian\'), (\'io\', \'Ido\'), (\'is\', \'Icelandic\'), (\'it\', \'Italian\'), (\'ja\', \'Japanese\'), (\'ka\', \'Georgian\'), (\'kk\', \'Kazakh\'), (\'km\', \'Khmer\'), (\'kn\', \'Kannada\'), (\'ko\', \'Korean\'), (\'lb\', \'Luxembourgish\'), (\'lt\', \'Lithuanian\'), (\'lv\', \'Latvian\'), (\'mk\', \'Macedonian\'), (\'ml\', \'Malayalam\'), (\'mn\', \'Mongolian\'), (\'mr\', \'Marathi\'), (\'my\', \'Burmese\'), (\'nb\', \'Norwegian Bokmål\'), (\'ne\', \'Nepali\'), (\'nl\', \'Dutch\'), (\'nn\', \'Norwegian Nynorsk\'), (\'os\', \'Ossetic\'), (\'pa\', \'Punjabi\'), (\'pl\', \'Polish\'), (\'pt\', \'Portuguese\'), (\'pt-br\', \'Brazilian Portuguese\'), (\'ro\', \'Romanian\'), (\'ru\', \'Russian\'), (\'sk\', \'Slovak\'), (\'sl\', \'Slovenian\'), (\'sq\', \'Albanian\'), (\'sr\', \'Serbian\'), (\'sr-latn\', \'Serbian Latin\'), (\'sv\', \'Swedish\'), (\'sw\', \'Swahili\'), (\'ta\', \'Tamil\'), (\'te\', \'Telugu\'), (\'th\', \'Thai\'), (\'tr\', \'Turkish\'), (\'tt\', \'Tatar\'), (\'udm\', \'Udmurt\'), (\'uk\', \'Ukrainian\'), (\'ur\', \'Urdu\'), (\'vi\', \'Vietnamese\'), (\'zh-hans\', \'Simplified Chinese\'), (\'zh-hant\', \'Traditional Chinese\')], \'LANGUAGE_CODE\': \'en-us\', \'LANGUAGE_BIDI\': False, \'MEDIA_URL\': \'/media/\', \'STATIC_URL\': \'/static/\', \'TIME_ZONE\': \'India Standard Time\', \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021D5F62F438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}, \'form\': <LoginForm bound=False, valid=False, fields=(username;password;remember_me)>, \'view\': <accounts.views.LoginView object at 0x0000021D5F62FA20>, \'site\': <django.contrib.sites.requests.RequestSite object at 0x0000021D5F62FCF8>, \'site_name\': \'127.0.0.1:8000\', \'next\': \'\', \'block\': <Block Node: form. Contents: [<TextNode: \'\\n  \'>, <crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode object at 0x0000021D5F63CC88>, <TextNode: \'\\n\\n  <div class="form-mess\'>, <django.template.defaulttags.URLNode object at 0x0000021D5F63CD30>, <TextNode: \'">Sign up</a>.\\n    </p>\\n \'>]>, \'template_pack\': \'bootstrap3\', \'form_action\': \'\', \'form_method\': \'post\', \'form_tag\': True, \'form_class\': \'\', \'form_id\': \'\', \'form_style\': \'\', \'form_error_title\': None, \'formset_error_title\': None, \'form_show_errors\': True, \'help_text_inline\': False, \'html5_required\': False, \'form_show_labels\': True, \'disable_csrf\': False, \'inputs\': [], \'is_formset\': False, \'form_attrs\': {}, \'flat_attrs\': \' placeholder="Enter Password"\', \'error_text_inline\': True, \'label_class\': \'\', \'label_size\': 0, \'field_class\': \'\', \'include_media\': True, \'attrs\': {}, \'field\': <django.forms.boundfield.BoundField object at 0x0000021D5F668320>, \'labelclass\': None, \'wrapper_class\': None}]'
+[08/Apr/2017 21:55:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'tag' in template 'bootstrap3/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'True\': True, \'False\': False, \'None\': None, \'csrf_token\': <SimpleLazyObject: \'lIaXKLek4eLi5TsBM6WLOQTVeuwIkZHwjrHbspVK5kHZzT6ynAbVlUAHKv0wTo4Q\'>, \'user\': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000021D5F62F358>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021D5F62FF60>, \'debug\': True, \'sql_queries\': <function debug.<locals>.<lambda> at 0x0000021D5F64C488>, \'LANGUAGES\': [(\'af\', \'Afrikaans\'), (\'ar\', \'Arabic\'), (\'ast\', \'Asturian\'), (\'az\', \'Azerbaijani\'), (\'bg\', \'Bulgarian\'), (\'be\', \'Belarusian\'), (\'bn\', \'Bengali\'), (\'br\', \'Breton\'), (\'bs\', \'Bosnian\'), (\'ca\', \'Catalan\'), (\'cs\', \'Czech\'), (\'cy\', \'Welsh\'), (\'da\', \'Danish\'), (\'de\', \'German\'), (\'dsb\', \'Lower Sorbian\'), (\'el\', \'Greek\'), (\'en\', \'English\'), (\'en-au\', \'Australian English\'), (\'en-gb\', \'British English\'), (\'eo\', \'Esperanto\'), (\'es\', \'Spanish\'), (\'es-ar\', \'Argentinian Spanish\'), (\'es-co\', \'Colombian Spanish\'), (\'es-mx\', \'Mexican Spanish\'), (\'es-ni\', \'Nicaraguan Spanish\'), (\'es-ve\', \'Venezuelan Spanish\'), (\'et\', \'Estonian\'), (\'eu\', \'Basque\'), (\'fa\', \'Persian\'), (\'fi\', \'Finnish\'), (\'fr\', \'French\'), (\'fy\', \'Frisian\'), (\'ga\', \'Irish\'), (\'gd\', \'Scottish Gaelic\'), (\'gl\', \'Galician\'), (\'he\', \'Hebrew\'), (\'hi\', \'Hindi\'), (\'hr\', \'Croatian\'), (\'hsb\', \'Upper Sorbian\'), (\'hu\', \'Hungarian\'), (\'ia\', \'Interlingua\'), (\'id\', \'Indonesian\'), (\'io\', \'Ido\'), (\'is\', \'Icelandic\'), (\'it\', \'Italian\'), (\'ja\', \'Japanese\'), (\'ka\', \'Georgian\'), (\'kk\', \'Kazakh\'), (\'km\', \'Khmer\'), (\'kn\', \'Kannada\'), (\'ko\', \'Korean\'), (\'lb\', \'Luxembourgish\'), (\'lt\', \'Lithuanian\'), (\'lv\', \'Latvian\'), (\'mk\', \'Macedonian\'), (\'ml\', \'Malayalam\'), (\'mn\', \'Mongolian\'), (\'mr\', \'Marathi\'), (\'my\', \'Burmese\'), (\'nb\', \'Norwegian Bokmål\'), (\'ne\', \'Nepali\'), (\'nl\', \'Dutch\'), (\'nn\', \'Norwegian Nynorsk\'), (\'os\', \'Ossetic\'), (\'pa\', \'Punjabi\'), (\'pl\', \'Polish\'), (\'pt\', \'Portuguese\'), (\'pt-br\', \'Brazilian Portuguese\'), (\'ro\', \'Romanian\'), (\'ru\', \'Russian\'), (\'sk\', \'Slovak\'), (\'sl\', \'Slovenian\'), (\'sq\', \'Albanian\'), (\'sr\', \'Serbian\'), (\'sr-latn\', \'Serbian Latin\'), (\'sv\', \'Swedish\'), (\'sw\', \'Swahili\'), (\'ta\', \'Tamil\'), (\'te\', \'Telugu\'), (\'th\', \'Thai\'), (\'tr\', \'Turkish\'), (\'tt\', \'Tatar\'), (\'udm\', \'Udmurt\'), (\'uk\', \'Ukrainian\'), (\'ur\', \'Urdu\'), (\'vi\', \'Vietnamese\'), (\'zh-hans\', \'Simplified Chinese\'), (\'zh-hant\', \'Traditional Chinese\')], \'LANGUAGE_CODE\': \'en-us\', \'LANGUAGE_BIDI\': False, \'MEDIA_URL\': \'/media/\', \'STATIC_URL\': \'/static/\', \'TIME_ZONE\': \'India Standard Time\', \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021D5F62F438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}, \'form\': <LoginForm bound=False, valid=False, fields=(username;password;remember_me)>, \'view\': <accounts.views.LoginView object at 0x0000021D5F62FA20>, \'site\': <django.contrib.sites.requests.RequestSite object at 0x0000021D5F62FCF8>, \'site_name\': \'127.0.0.1:8000\', \'next\': \'\', \'block\': <Block Node: form. Contents: [<TextNode: \'\\n  \'>, <crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode object at 0x0000021D5F63CC88>, <TextNode: \'\\n\\n  <div class="form-mess\'>, <django.template.defaulttags.URLNode object at 0x0000021D5F63CD30>, <TextNode: \'">Sign up</a>.\\n    </p>\\n \'>]>, \'template_pack\': \'bootstrap3\', \'form_action\': \'\', \'form_method\': \'post\', \'form_tag\': True, \'form_class\': \'\', \'form_id\': \'\', \'form_style\': \'\', \'form_error_title\': None, \'formset_error_title\': None, \'form_show_errors\': True, \'help_text_inline\': False, \'html5_required\': False, \'form_show_labels\': True, \'disable_csrf\': False, \'inputs\': [], \'is_formset\': False, \'form_attrs\': {}, \'flat_attrs\': \'\', \'error_text_inline\': True, \'label_class\': \'\', \'label_size\': 0, \'field_class\': \'\', \'include_media\': True, \'attrs\': {}, \'field\': <django.forms.boundfield.BoundField object at 0x0000021D5F6CDD30>, \'labelclass\': None, \'wrapper_class\': None}]'
+[08/Apr/2017 21:55:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'tag' in template 'bootstrap3/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in '[{\'True\': True, \'False\': False, \'None\': None}, {\'True\': True, \'False\': False, \'None\': None, \'csrf_token\': <SimpleLazyObject: \'lIaXKLek4eLi5TsBM6WLOQTVeuwIkZHwjrHbspVK5kHZzT6ynAbVlUAHKv0wTo4Q\'>, \'user\': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x0000021D5F62F358>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0000021D5F62FF60>, \'debug\': True, \'sql_queries\': <function debug.<locals>.<lambda> at 0x0000021D5F64C488>, \'LANGUAGES\': [(\'af\', \'Afrikaans\'), (\'ar\', \'Arabic\'), (\'ast\', \'Asturian\'), (\'az\', \'Azerbaijani\'), (\'bg\', \'Bulgarian\'), (\'be\', \'Belarusian\'), (\'bn\', \'Bengali\'), (\'br\', \'Breton\'), (\'bs\', \'Bosnian\'), (\'ca\', \'Catalan\'), (\'cs\', \'Czech\'), (\'cy\', \'Welsh\'), (\'da\', \'Danish\'), (\'de\', \'German\'), (\'dsb\', \'Lower Sorbian\'), (\'el\', \'Greek\'), (\'en\', \'English\'), (\'en-au\', \'Australian English\'), (\'en-gb\', \'British English\'), (\'eo\', \'Esperanto\'), (\'es\', \'Spanish\'), (\'es-ar\', \'Argentinian Spanish\'), (\'es-co\', \'Colombian Spanish\'), (\'es-mx\', \'Mexican Spanish\'), (\'es-ni\', \'Nicaraguan Spanish\'), (\'es-ve\', \'Venezuelan Spanish\'), (\'et\', \'Estonian\'), (\'eu\', \'Basque\'), (\'fa\', \'Persian\'), (\'fi\', \'Finnish\'), (\'fr\', \'French\'), (\'fy\', \'Frisian\'), (\'ga\', \'Irish\'), (\'gd\', \'Scottish Gaelic\'), (\'gl\', \'Galician\'), (\'he\', \'Hebrew\'), (\'hi\', \'Hindi\'), (\'hr\', \'Croatian\'), (\'hsb\', \'Upper Sorbian\'), (\'hu\', \'Hungarian\'), (\'ia\', \'Interlingua\'), (\'id\', \'Indonesian\'), (\'io\', \'Ido\'), (\'is\', \'Icelandic\'), (\'it\', \'Italian\'), (\'ja\', \'Japanese\'), (\'ka\', \'Georgian\'), (\'kk\', \'Kazakh\'), (\'km\', \'Khmer\'), (\'kn\', \'Kannada\'), (\'ko\', \'Korean\'), (\'lb\', \'Luxembourgish\'), (\'lt\', \'Lithuanian\'), (\'lv\', \'Latvian\'), (\'mk\', \'Macedonian\'), (\'ml\', \'Malayalam\'), (\'mn\', \'Mongolian\'), (\'mr\', \'Marathi\'), (\'my\', \'Burmese\'), (\'nb\', \'Norwegian Bokmål\'), (\'ne\', \'Nepali\'), (\'nl\', \'Dutch\'), (\'nn\', \'Norwegian Nynorsk\'), (\'os\', \'Ossetic\'), (\'pa\', \'Punjabi\'), (\'pl\', \'Polish\'), (\'pt\', \'Portuguese\'), (\'pt-br\', \'Brazilian Portuguese\'), (\'ro\', \'Romanian\'), (\'ru\', \'Russian\'), (\'sk\', \'Slovak\'), (\'sl\', \'Slovenian\'), (\'sq\', \'Albanian\'), (\'sr\', \'Serbian\'), (\'sr-latn\', \'Serbian Latin\'), (\'sv\', \'Swedish\'), (\'sw\', \'Swahili\'), (\'ta\', \'Tamil\'), (\'te\', \'Telugu\'), (\'th\', \'Thai\'), (\'tr\', \'Turkish\'), (\'tt\', \'Tatar\'), (\'udm\', \'Udmurt\'), (\'uk\', \'Ukrainian\'), (\'ur\', \'Urdu\'), (\'vi\', \'Vietnamese\'), (\'zh-hans\', \'Simplified Chinese\'), (\'zh-hant\', \'Traditional Chinese\')], \'LANGUAGE_CODE\': \'en-us\', \'LANGUAGE_BIDI\': False, \'MEDIA_URL\': \'/media/\', \'STATIC_URL\': \'/static/\', \'TIME_ZONE\': \'India Standard Time\', \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x0000021D5F62F438>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'SUCCESS\': 25, \'WARNING\': 30, \'ERROR\': 40}, \'form\': <LoginForm bound=False, valid=False, fields=(username;password;remember_me)>, \'view\': <accounts.views.LoginView object at 0x0000021D5F62FA20>, \'site\': <django.contrib.sites.requests.RequestSite object at 0x0000021D5F62FCF8>, \'site_name\': \'127.0.0.1:8000\', \'next\': \'\', \'block\': <Block Node: form. Contents: [<TextNode: \'\\n  \'>, <crispy_forms.templatetags.crispy_forms_tags.CrispyFormNode object at 0x0000021D5F63CC88>, <TextNode: \'\\n\\n  <div class="form-mess\'>, <django.template.defaulttags.URLNode object at 0x0000021D5F63CD30>, <TextNode: \'">Sign up</a>.\\n    </p>\\n \'>]>, \'template_pack\': \'bootstrap3\', \'form_action\': \'\', \'form_method\': \'post\', \'form_tag\': True, \'form_class\': \'\', \'form_id\': \'\', \'form_style\': \'\', \'form_error_title\': None, \'formset_error_title\': None, \'form_show_errors\': True, \'help_text_inline\': False, \'html5_required\': False, \'form_show_labels\': True, \'disable_csrf\': False, \'inputs\': [], \'is_formset\': False, \'form_attrs\': {}, \'flat_attrs\': \'\', \'error_text_inline\': True, \'label_class\': \'\', \'label_size\': 0, \'field_class\': \'\', \'include_media\': True, \'attrs\': {}, \'field\': <django.forms.boundfield.BoundField object at 0x0000021D5F6CDD30>, \'labelclass\': None, \'wrapper_class\': None}]'
+[08/Apr/2017 21:55:29] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /login/ HTTP/1.1" 200 12841
+[08/Apr/2017 21:55:36] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."email" = 'admin@toki.com'; args=('admin@toki.com',)
+[08/Apr/2017 21:55:36] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' LIMIT 1; args=('fqcp86eflimmezt8g4p1xlufn3rup0w3',)
+[08/Apr/2017 21:55:36] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) BEGIN; args=None
+[08/Apr/2017 21:55:36] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.132) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'fqcp86eflimmezt8g4p1xlufn3rup0w3', 'OTIxZTkzZmQ2ZThhNTVjNmRiNjQzOTRmYWQ4ODUxM2Q1ZTU3YjQ4MTp7fQ==', '2017-04-22 16:25:36.851411'; args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', 'OTIxZTkzZmQ2ZThhNTVjNmRiNjQzOTRmYWQ4ODUxM2Q1ZTU3YjQ4MTp7fQ==', '2017-04-22 16:25:36.851411')
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) BEGIN; args=None
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.090) UPDATE "authtools_user" SET "last_login" = '2017-04-08 16:25:37.252456' WHERE "authtools_user"."id" = 1; args=('2017-04-08 16:25:37.252456', 1)
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) BEGIN; args=None
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) UPDATE "django_session" SET "session_data" = 'Mzk3ZTc3NTNhZmIxMGQ3OWQ3M2QyYmNhNmQxMDNjNDFiMzM3M2E1ODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyZGViY2IwZjk5NzZjY2EyYTA4NTc5ZTkzZWQwODdlOGRiNjdkOTY4In0=', "expire_date" = '2017-04-22 16:25:37.554329' WHERE "django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3'; args=('Mzk3ZTc3NTNhZmIxMGQ3OWQ3M2QyYmNhNmQxMDNjNDFiMzM3M2E1ODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyZGViY2IwZjk5NzZjY2EyYTA4NTc5ZTkzZWQwODdlOGRiNjdkOTY4In0=', '2017-04-22 16:25:37.554329', 'fqcp86eflimmezt8g4p1xlufn3rup0w3')
+[08/Apr/2017 21:55:37] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "POST /login/ HTTP/1.1" 302 0
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:25:37.740922'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:25:37.740922')
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "profiles_profile"."user_id", "profiles_profile"."slug", "profiles_profile"."picture", "profiles_profile"."bio", "profiles_profile"."email_verified" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 1; args=(1,)
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 21:55:37] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 21:55:37] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /users/me HTTP/1.1" 200 14159
+[08/Apr/2017 21:55:37] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /media/default_profile.png.140x140_q85_crop.png HTTP/1.1" 200 4704
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:25:44.018972'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:25:44.018972')
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" ORDER BY "notes_notes"."timestamp" DESC; args=()
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[08/Apr/2017 21:55:44] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/ HTTP/1.1" 200 11724
+[08/Apr/2017 21:55:44] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/theme.css HTTP/1.1" 200 273
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'profiles.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\profiles\\\\urls.py'> (None:profiles) ^users/>"
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'notes.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\notes\\\\urls.py'> (None:notes) ^notes/>"
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\\\Users\\\\Shubham\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python36\\\\lib\\\\site-packages\\\\debug_toolbar\\\\toolbar.py'> (djdt:djdt) ^__debug__/>"
+[08/Apr/2017 21:55:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:25:44.425339'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:25:44.425339')
+[08/Apr/2017 21:55:44] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py:152] Not Found: /favicon.ico
+[08/Apr/2017 21:55:44] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /favicon.ico HTTP/1.1" 404 13153
+[08/Apr/2017 21:55:48] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:25:48.937014'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:25:48.937014')
+[08/Apr/2017 21:55:48] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 21:55:49] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addtag/ HTTP/1.1" 200 11888
+[08/Apr/2017 21:55:55] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:25:55.899935'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:25:55.899935')
+[08/Apr/2017 21:55:55] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 21:55:55] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[08/Apr/2017 21:55:55] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/ HTTP/1.1" 200 12175
+[08/Apr/2017 21:55:59] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" WHERE "notes_notes"."id" = 1; args=(1,)
+[08/Apr/2017 21:55:59] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:25:59.623622'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:25:59.623622')
+[08/Apr/2017 21:55:59] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 21:55:59] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[08/Apr/2017 21:55:59] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[08/Apr/2017 21:55:59] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/?id=1 HTTP/1.1" 200 12584
+[08/Apr/2017 21:55:59] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/theme.css HTTP/1.1" 304 0
+[08/Apr/2017 21:56:03] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:26:03.185129'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:26:03.185129')
+[08/Apr/2017 21:56:03] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 21:56:03] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "profiles_profile"."user_id", "profiles_profile"."slug", "profiles_profile"."picture", "profiles_profile"."bio", "profiles_profile"."email_verified" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 1; args=(1,)
+[08/Apr/2017 21:56:03] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'home.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 21:56:03] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 14159
