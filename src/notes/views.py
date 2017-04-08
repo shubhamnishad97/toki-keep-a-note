@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from .models import Notes, Tag
-from notes.forms import NoteForm
+from notes.forms import NoteForm, TagForm
  
 # Create your views here.
  
@@ -42,3 +42,30 @@ def add_note(request):
 		form = NoteForm(instance=note)
 		
 	return render(request, 'addNote.html', {'form':form, 'note':note})
+
+
+
+
+def add_tag(request):
+	id = request.GET.get('id', None)
+	if id is not None:
+		tag = get_object_or_404(Tag, id=id)
+	else:
+		tag = None
+	
+	if request.method == 'POST':
+		if request.POST.get('control') == 'delete':
+			tag.delete()
+			messages.add_message(request, messages.INFO, 'Tag Deleted!')
+			return HttpResponseRedirect(reverse('notes:index'))
+		
+		form = TagForm(request.POST, instance=tag)
+		if form.is_valid():
+			form.save()
+			messages.add_message(request, messages.INFO, 'Tag Added!')
+			return HttpResponseRedirect(reverse('notes:index'))
+	
+	else:
+		form = TagForm(instance=tag)
+		
+	return render(request, 'addTag.html', {'form':form, 'tag':tag})
