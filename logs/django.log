@@ -19291,8 +19291,11 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<Reg
 [08/Apr/2017 21:03:33] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
 [08/Apr/2017 21:03:33] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
 [08/Apr/2017 21:03:33] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/ HTTP/1.1" 200 11933
+<<<<<<< HEAD
+=======
 [08/Apr/2017 21:48:57] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) 
             SELECT name, type FROM sqlite_master
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 [08/Apr/2017 21:48:57] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+>>>>>>> refs/remotes/origin/master

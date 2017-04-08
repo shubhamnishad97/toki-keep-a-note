@@ -1,0 +1,43 @@
+{% extends 'notesBase.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="jumbotron">
+	<h1 align='center'>Notes!</h1>
+</div>
+
+
+
+<div class='col-md-9'>
+{% if notes %}
+	{% for note in notes %}
+	<div class="page-header">
+		<h3>{{note.label}}   <a style="font-size:0.7em;" href="{% url 'notes:addnote' %}?id={{note.id}}">Delete</a></h3>
+	</div>
+	{{note.body|linebreaks}}
+		{% for tag in note.tags.all %}
+		{{tag}}{% if not forloop.last %} | {% endif %}
+		{% endfor %}
+	{% endfor %}
+{% else %}
+	<div class='alert alert-warning' align='center'>
+		<h3>No Notes Yet!</h3>
+	</div>
+{% endif %}
+</div>
+
+<div class='col-md-3'>
+    <h3 class="page-header" align='right'>Tags</h3>
+    <ul>
+        {% if tags %}
+            {% for tag in tags %}
+            <li>{{tag}}</li>
+            {% endfor %}
+        {% else %}
+            <div class='alert alert-warning'>No tags yet!</div>
+        {% endif %}
+    </ul>
+</div>
+
+{% endblock body %}
