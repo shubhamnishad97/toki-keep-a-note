@@ -19780,3 +19780,344 @@ Traceback (most recent call last):
     self.related.get_accessor_name()
 django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
 [08/Apr/2017 21:56:03] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 14159
+[08/Apr/2017 22:24:41] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[08/Apr/2017 22:24:41] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[08/Apr/2017 22:24:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:54:44.765573'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:54:44.765573')
+[08/Apr/2017 22:24:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:24:44] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "profiles_profile"."user_id", "profiles_profile"."slug", "profiles_profile"."picture", "profiles_profile"."bio", "profiles_profile"."email_verified" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 1; args=(1,)
+[08/Apr/2017 22:24:45] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'home.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:24:45] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 14159
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:54:51.120882'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:54:51.120882')
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "profiles_profile"."user_id", "profiles_profile"."slug", "profiles_profile"."picture", "profiles_profile"."bio", "profiles_profile"."email_verified" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 1; args=(1,)
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:24:51] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'profiles/show_profile.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:24:51] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /users/me HTTP/1.1" 200 14159
+[08/Apr/2017 22:25:04] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:55:04.731162'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:55:04.731162')
+[08/Apr/2017 22:25:04] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:25:04] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "profiles_profile"."user_id", "profiles_profile"."slug", "profiles_profile"."picture", "profiles_profile"."bio", "profiles_profile"."email_verified" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 1; args=(1,)
+[08/Apr/2017 22:25:04] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'home.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:25:04] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 14159
+[08/Apr/2017 22:25:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:55:06.329578'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:55:06.329578')
+[08/Apr/2017 22:25:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:25:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "profiles_profile"."user_id", "profiles_profile"."slug", "profiles_profile"."picture", "profiles_profile"."bio", "profiles_profile"."email_verified" FROM "profiles_profile" WHERE "profiles_profile"."user_id" = 1; args=(1,)
+[08/Apr/2017 22:25:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'profile' in template 'about.html'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\utils\functional.py", line 235, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 370, in __get__
+    self.related.get_accessor_name()
+django.db.models.fields.related_descriptors.RelatedObjectDoesNotExist: User has no profile.
+[08/Apr/2017 22:25:06] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /about/ HTTP/1.1" 200 15979
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:55:14.062293'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:55:14.062293')
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" ORDER BY "notes_notes"."timestamp" DESC; args=()
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[08/Apr/2017 22:25:14] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/ HTTP/1.1" 200 11723
+[08/Apr/2017 22:25:14] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/theme.css HTTP/1.1" 304 0
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'profiles.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\profiles\\\\urls.py'> (None:profiles) ^users/>"
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'notes.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\notes\\\\urls.py'> (None:notes) ^notes/>"
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\\\Users\\\\Shubham\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python36\\\\lib\\\\site-packages\\\\debug_toolbar\\\\toolbar.py'> (djdt:djdt) ^__debug__/>"
+[08/Apr/2017 22:25:14] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:55:14.338256'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:55:14.338256')
+[08/Apr/2017 22:25:14] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py:152] Not Found: /favicon.ico
+[08/Apr/2017 22:25:14] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /favicon.ico HTTP/1.1" 404 13153
+[08/Apr/2017 22:25:21] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" WHERE "notes_notes"."id" = 1; args=(1,)
+[08/Apr/2017 22:25:21] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:55:21.974865'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:55:21.974865')
+[08/Apr/2017 22:25:21] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:25:22] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[08/Apr/2017 22:25:22] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[08/Apr/2017 22:25:22] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/?id=1 HTTP/1.1" 200 12585
+[08/Apr/2017 22:25:28] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'fqcp86eflimmezt8g4p1xlufn3rup0w3' AND "django_session"."expire_date" > '2017-04-08 16:55:28.189200'); args=('fqcp86eflimmezt8g4p1xlufn3rup0w3', '2017-04-08 16:55:28.189200')
+[08/Apr/2017 22:25:28] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
+[08/Apr/2017 22:25:28] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[08/Apr/2017 22:25:28] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/ HTTP/1.1" 200 12176

@@ -12,9 +12,10 @@
 <div class='col-md-9'>
 {% if notes %}
 	{% for note in notes %}
-	<div class="page-header">
-		<h3>{{note.label}}   <a style="font-size:0.7em;" href="{% url 'notes:addnote' %}?id={{note.id}}">Delete</a></h3>
-	</div>
+	 <h3 class='page-header'>
+        <a href="{% url 'notes:addnote' %}?id={{note.id}}">{{note.label}}</a>
+    </h3>
+
 	{{note.body|linebreaks}}
 		{% for tag in note.tags.all %}
 		{{tag}}{% if not forloop.last %} | {% endif %}
