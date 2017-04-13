@@ -20121,3 +20121,361 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<Reg
 [08/Apr/2017 22:25:28] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "authtools_user"."id", "authtools_user"."password", "authtools_user"."last_login", "authtools_user"."is_superuser", "authtools_user"."email", "authtools_user"."is_staff", "authtools_user"."is_active", "authtools_user"."date_joined", "authtools_user"."name" FROM "authtools_user" WHERE "authtools_user"."id" = 1; args=(1,)
 [08/Apr/2017 22:25:28] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
 [08/Apr/2017 22:25:28] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/ HTTP/1.1" 200 12176
+[12/Apr/2017 21:35:27] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[12/Apr/2017 21:35:27] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[12/Apr/2017 21:35:45] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 13750
+[12/Apr/2017 21:35:52] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" ORDER BY "notes_notes"."timestamp" DESC; args=()
+[12/Apr/2017 21:35:52] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[12/Apr/2017 21:35:52] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[12/Apr/2017 21:35:52] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/ HTTP/1.1" 200 11690
+[12/Apr/2017 21:35:53] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'profiles.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\profiles\\\\urls.py'> (None:profiles) ^users/>"
+[12/Apr/2017 21:35:53] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/Apr/2017 21:35:53] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'notes.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\notes\\\\urls.py'> (None:notes) ^notes/>"
+[12/Apr/2017 21:35:53] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\\\Users\\\\Shubham\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python36\\\\lib\\\\site-packages\\\\debug_toolbar\\\\toolbar.py'> (djdt:djdt) ^__debug__/>"
+[12/Apr/2017 21:35:53] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py:152] Not Found: /favicon.ico
+[12/Apr/2017 21:35:53] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /favicon.ico HTTP/1.1" 404 13153
+[12/Apr/2017 21:35:56] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" WHERE "notes_notes"."id" = 1; args=(1,)
+[12/Apr/2017 21:35:56] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[12/Apr/2017 21:35:56] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[12/Apr/2017 21:35:56] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/?id=1 HTTP/1.1" 200 12585
+[12/Apr/2017 21:36:04] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[12/Apr/2017 21:36:04] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/ HTTP/1.1" 200 12174
+[12/Apr/2017 21:36:16] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 13750
+[13/Apr/2017 19:24:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Apr/2017 19:24:29] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/Apr/2017 19:24:36] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET / HTTP/1.1" 200 13751
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" ORDER BY "notes_notes"."timestamp" DESC; args=()
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[13/Apr/2017 19:24:39] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/ HTTP/1.1" 200 11690
+[13/Apr/2017 19:24:39] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/bootstrap-theme.min.css HTTP/1.1" 200 19839
+[13/Apr/2017 19:24:39] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/bootstrap.min.css HTTP/1.1" 200 113502
+[13/Apr/2017 19:24:39] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/theme.css HTTP/1.1" 200 273
+[13/Apr/2017 19:24:39] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /static/toki/js/bootstrap.min.js HTTP/1.1" 200 35607
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'profiles.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\profiles\\\\urls.py'> (None:profiles) ^users/>"
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'notes.urls' from 'D:\\\\GitHub\\\\toki-project\\\\tokienv\\\\toki\\\\src\\\\notes\\\\urls.py'> (None:notes) ^notes/>"
+[13/Apr/2017 19:24:39] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLPattern home ^$>], [<RegexURLPattern about ^about/$>], [<RegexURLResolver <module 'profiles.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\profiles\\urls.py'> (None:profiles) ^users/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern login ^login/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern logout ^logout/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern signup ^signup/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-change ^password-change/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset ^password-reset/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-done ^password-reset-done/$>], [<RegexURLResolver <module 'accounts.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\accounts\\urls.py'> (None:accounts) ^>, <RegexURLPattern password-reset-confirm ^password-reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$$>], [<RegexURLResolver <module 'notes.urls' from 'D:\\GitHub\\toki-project\\tokienv\\toki\\src\\notes\\urls.py'> (None:notes) ^notes/>], [<RegexURLPattern None ^media\/(?P<path>.*)$>], [<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\Users\\Shubham\\AppData\\Local\\Programs\\Python\\Python36\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'debug_toolbar.toolbar' from 'C:\\\\Users\\\\Shubham\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python36\\\\lib\\\\site-packages\\\\debug_toolbar\\\\toolbar.py'> (djdt:djdt) ^__debug__/>"
+[13/Apr/2017 19:24:40] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py:152] Not Found: /favicon.ico
+[13/Apr/2017 19:24:40] WARNING [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /favicon.ico HTTP/1.1" 404 13153
+[13/Apr/2017 19:27:03] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/Apr/2017 19:27:03] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/Apr/2017 19:27:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_notes"."id", "notes_notes"."label", "notes_notes"."body", "notes_notes"."timestamp" FROM "notes_notes" ORDER BY "notes_notes"."timestamp" DESC; args=()
+[13/Apr/2017 19:27:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag" INNER JOIN "notes_notes_tags" ON ("notes_tag"."id" = "notes_notes_tags"."tag_id") WHERE "notes_notes_tags"."notes_id" = 1; args=(1,)
+[13/Apr/2017 19:27:06] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.000) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[13/Apr/2017 19:27:06] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/ HTTP/1.1" 200 11683
+[13/Apr/2017 19:27:11] DEBUG [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py:90] (0.004) SELECT "notes_tag"."id", "notes_tag"."label", "notes_tag"."slug" FROM "notes_tag"; args=()
+[13/Apr/2017 19:27:11] INFO [C:\Users\Shubham\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py:131] "GET /notes/addnote/ HTTP/1.1" 200 12167

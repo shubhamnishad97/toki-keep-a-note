@@ -1,1 +1,17 @@
 -r requirements/development.txt
+
+Django==1.10.6
+django-admin-bootstrapped==2.5.7
+django-authtools==1.5.0
+django-braces==1.11.0
+django-crispy-forms==1.6.1
+django-debug-toolbar==1.7
+django-environ==0.4.1
+django-extensions==1.7.8
+easy-thumbnails==2.3
+olefile==0.44
+Pillow==4.0.0
+six==1.10.0
+sqlparse==0.2.3
+virtualenv==15.1.0
+Werkzeug==0.12.1
