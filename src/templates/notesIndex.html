@@ -15,7 +15,7 @@
 	 <h3 class='page-header'>
         <a href="{% url 'notes:addnote' %}?id={{note.id}}">{{note.label}}</a>
     </h3>
-
+    {{note.owner}}
 	{{note.body|linebreaks}}
 		{% for tag in note.tags.all %}
 		{{tag}}{% if not forloop.last %} | {% endif %}
