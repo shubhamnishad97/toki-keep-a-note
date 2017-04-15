@@ -15,8 +15,8 @@ def user_only(user):
 
 @user_passes_test(user_only, login_url="/")
 def index_view(request):
-	notes = Notes.objects.all().filter(id=request.user.id)
-	tags = Tag.objects.all().filter(id=request.user.id)
+	notes = Notes.objects.filter(id=request.user.id)
+	tags = Tag.objects.filter(id=request.user.id)
 	return render(request, 'notesIndex.html', {'notes':notes, 'tags':tags})
 
 
