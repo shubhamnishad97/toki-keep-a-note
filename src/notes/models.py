@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
  
 class Notes(models.Model):
@@ -7,7 +7,6 @@ class Notes(models.Model):
 	body = models.TextField(max_length=20000)
 	timestamp = models.DateTimeField(auto_now_add=True)
 	tags = models.ManyToManyField('Tag', related_name='notes', blank=True)
-	
 	def __str__(self):
 		return self.label
 		

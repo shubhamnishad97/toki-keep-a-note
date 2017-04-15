@@ -5,16 +5,19 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse
 from .models import Notes, Tag
 from notes.forms import NoteForm, TagForm
- 
+
+from django.contrib.auth.decorators import user_passes_test
+def user_only(user):
+    return (user.is_authenticated()) 
 # Create your views here.
  
 
 
+@user_passes_test(user_only, login_url="/")
 def index_view(request):
-	notes = Notes.objects.all().order_by('-timestamp')
-	tags = Tag.objects.all()
+	notes = Notes.objects.filter(id=request.user.id)
+	tags = Tag.objects.filter(id=request.user.id)
 	return render(request, 'notesIndex.html', {'notes':notes, 'tags':tags})
-
 
 
 def add_note(request):
