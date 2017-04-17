@@ -15,7 +15,7 @@ def user_only(user):
 
 @user_passes_test(user_only, login_url="/")
 def index_view(request):
-	notes = Notes.objects.filter(id=request.user.id)
+	notes = Notes.objects.all().filter(owner=request.user)
 	tags = Tag.objects.filter(id=request.user.id)
 	return render(request, 'notesIndex.html', {'notes':notes, 'tags':tags})
 
@@ -37,7 +37,10 @@ def add_note(request):
 		
 		form = NoteForm(request.POST, instance=note)
 		if form.is_valid():
-			form.save()
+			
+			obj = form.save(commit=False)
+			obj.owner = request.user
+			obj.save()
 			messages.add_message(request, messages.INFO, 'Note Added!')
 			return HttpResponseRedirect(reverse('notes:index'))
 	
