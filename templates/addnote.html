@@ -1,7 +1,10 @@
 {% extends 'notesBase.html' %}
 {% load static %}
 {% block body %}
-
+ 
+{% block head_extra %}
+{{form.media}}
+{% endblock head_extra %}
 <div class="jumbotron">
 	<h1 align='center'>Create New Note!</h1>
 </div>

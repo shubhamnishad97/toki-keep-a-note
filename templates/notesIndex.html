@@ -15,7 +15,7 @@
     </h3>
 
 
-	{{note.body|linebreaks}}
+	<div class="content-markdown">{{note.body}}</div>
 		{% for tag in note.tags.all %}
 		{{tag}}{% if not forloop.last %} | {% endif %}
 		{% endfor %}
@@ -34,12 +34,24 @@
     <ul class="list-group">
         {% if tags %}
             {% for tag in tags %}
-            <li class="list-group-item">{{tag}}</li>
+            <li class="list-group-item">
+                <a href="{% url 'notes:addtag' %}?id={{tag.id}}">{{tag}}</a>
+            </li>
             {% endfor %}
         {% else %}
             <div class='alert alert-warning'>No tags yet!</div>
         {% endif %}
     </ul>
 </div>
-
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.content-markdown').each(function(){
+            var content = $(this).text();
+            var markedContent = marked(content);
+            $(this).html(markedContent);
+        })
+        
+      })
+    </script>
 {% endblock body %}
