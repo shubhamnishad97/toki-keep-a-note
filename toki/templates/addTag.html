@@ -1,0 +1,32 @@
+{% extends 'notesBase.html' %}
+{% load static %}
+{% block body %}
+
+<div class="jumbotron">
+	<h1 align='center'>Create New Tag</h1>
+</div>
+
+
+
+<div class='col-md-12'>
+	<form action="" method="post">{% csrf_token %}
+	{{form.as_p}}
+	<input type='submit' value='Create New Tag' class='btn btn-primary btn-lg btn-block' />
+	</form>
+</div>
+
+{% if tag %}
+<div class="col-md-12" style="padding-top:15px">
+    <form action="" method="POST">{% csrf_token %}
+    <input type="hidden" name="control" value="delete" />
+    <input type="submit" value="Delete" class="btn btn-lg btn-block btn-danger" />
+    </form>
+</div>
+{% endif %}
+
+<script type='text/javascript'>
+$('input[type="text"]').addClass('form-control');
+$('textarea').addClass('form-control');
+</script>
+
+{% endblock body %}
