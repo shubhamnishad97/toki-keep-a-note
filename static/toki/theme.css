@@ -16,3 +16,8 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+.wmd-panel{
+	width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}

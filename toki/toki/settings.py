@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'accounts',
     'debug_toolbar',
     'pagedown',
-    'markdown_deux',
     'notes'
 ]
 

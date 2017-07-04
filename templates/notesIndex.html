@@ -7,25 +7,26 @@
 {% if notes %}
     <h3 class="page-header" align='center'>Notes</h3>
     <ul class="list-group">
-	{% for note in notes %}
-	 <li class="list-group-item">
+    {% for note in notes %}
+     <li class="list-group-item">
      <h3>
         <a href="{% url 'notes:addnote' %}?id={{note.id}}">{{note.label}}</a>
         <h6 align="right"><a  href="{% url 'notes:addnote' %}?id={{note.id}}">update or delete</a></h6>
     </h3>
 
 
-	<div class="content-markdown">{{note.body}}</div>
-		{% for tag in note.tags.all %}
-		{{tag}}{% if not forloop.last %} | {% endif %}
-		{% endfor %}
+    <div class="content-markdown">{{note.body}}</div>
+        {% for tag in note.tags.all %}
+        {{tag}}{% if not forloop.last %} | {% endif %}
+        {% endfor %}
      </li>   
-	{% endfor %}
+    {% endfor %}
     </ul>
+
 {% else %}
-	<div class='alert alert-warning' align='center'>
-		<h3>No Notes Yet!</h3>
-	</div>
+    <div class='alert alert-warning' align='center'>
+        <h3>No Notes Yet!</h3>
+    </div>
 {% endif %}
 </div>
 
