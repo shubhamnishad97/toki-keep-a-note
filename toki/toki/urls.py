@@ -30,3 +30,9 @@ urlpatterns = [
     url(r'^', include(accounts.urls, namespace='accounts')),
     url(r'^notes/', include('notes.urls', namespace='notes')),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

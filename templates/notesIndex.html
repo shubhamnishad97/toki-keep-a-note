@@ -3,24 +3,25 @@
 {% block body %}
 
 
-<div class="jumbotron">
-	<h1 align='center'>Notes!</h1>
-</div>
-
-
-
 <div class='col-md-9'>
 {% if notes %}
+    <h3 class="page-header" align='center'>Notes</h3>
+    <ul class="list-group">
 	{% for note in notes %}
-	 <h3 class='page-header'>
+	 <li class="list-group-item">
+     <h3>
         <a href="{% url 'notes:addnote' %}?id={{note.id}}">{{note.label}}</a>
+        <h6 align="right"><a  href="{% url 'notes:addnote' %}?id={{note.id}}">update or delete</a></h6>
     </h3>
+
 
 	{{note.body|linebreaks}}
 		{% for tag in note.tags.all %}
 		{{tag}}{% if not forloop.last %} | {% endif %}
 		{% endfor %}
+     </li>   
 	{% endfor %}
+    </ul>
 {% else %}
 	<div class='alert alert-warning' align='center'>
 		<h3>No Notes Yet!</h3>
@@ -29,11 +30,11 @@
 </div>
 
 <div class='col-md-3'>
-    <h3 class="page-header" align='right'>Tags</h3>
-    <ul>
+    <h3 class="page-header" align='center'>Tags</h3>
+    <ul class="list-group">
         {% if tags %}
             {% for tag in tags %}
-            <li>{{tag}}</li>
+            <li class="list-group-item">{{tag}}</li>
             {% endfor %}
         {% else %}
             <div class='alert alert-warning'>No tags yet!</div>
