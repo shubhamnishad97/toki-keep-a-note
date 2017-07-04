@@ -20,10 +20,8 @@ def index_view(request):
 	return render(request, 'notesIndex.html', {'notes':notes, 'tags':tags})
 
 
-
+@user_passes_test(user_only, login_url="/")
 def add_note(request):
-
-
 	id = request.GET.get('id', None)
 	if id is not None:
 		note = get_object_or_404(Notes, id=id)
@@ -52,7 +50,7 @@ def add_note(request):
 
 
 
-
+@user_passes_test(user_only, login_url="/")
 def add_tag(request):
 	id = request.GET.get('id', None)
 	if id is not None:
