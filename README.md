@@ -36,7 +36,7 @@ I was interested in Django from the first time I searched about and after a litt
 ![](static/toki-screenshots/desktop/notesIndex.PNG) 
 ![](static/toki-screenshots/desktop/addNotes.PNG) 
 ![](static/toki-screenshots/desktop/editOrDelete.PNG) 
-![](static/toki-screenshots/desktop/useProfile.PNG) 
-![](static/toki-screenshots/desktop/adminUserLayout)
+![](static/toki-screenshots/desktop/userProfile.PNG) 
+![](static/toki-screenshots/desktop/adminUserLayout.PNG)
 
 #### 
