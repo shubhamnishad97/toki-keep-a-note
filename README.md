@@ -33,10 +33,10 @@ I was interested in Django from the first time I searched about and after a litt
 
 #### 
 
-![](toki-screenshots/desktop/notesIndex.PNG) 
-![](toki-screenshots/desktop/addNotes.PNG) 
-![](toki-screenshots/desktop/editOrDelete.PNG) 
-![](toki-screenshots/desktop/useProfile.PNG) 
-![](toki-screenshots/desktop/adminUserLayout)
+![](static/toki-screenshots/desktop/notesIndex.PNG) 
+![](static/toki-screenshots/desktop/addNotes.PNG) 
+![](static/toki-screenshots/desktop/editOrDelete.PNG) 
+![](static/toki-screenshots/desktop/useProfile.PNG) 
+![](static/toki-screenshots/desktop/adminUserLayout)
 
 #### 
