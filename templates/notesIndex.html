@@ -16,9 +16,6 @@
 
 
     <div class="content-markdown">{{note.body}}</div>
-        {% for tag in note.tags.all %}
-        {{tag}}{% if not forloop.last %} | {% endif %}
-        {% endfor %}
      </li>   
     {% endfor %}
     </ul>
