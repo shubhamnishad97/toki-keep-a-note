@@ -36,7 +36,7 @@ I was interested in Django from the first time I searched about and after a litt
 *   [django-crispy-forms](http://django-crispy-forms.readthedocs.io/en/latest/): it makes your forms way more beautiful or I should say crispy.
 *   [virtualenv](https://virtualenv.pypa.io/en/stable/): its a no-brainer.
 *   [django-pagedown](https://github.com/timmyomahony/django-pagedown): provides easy editor for markdown input.
-*   [other-packages](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/requirements.txt): do check the requirement file.
+*   many other packages are used, for them do check the requirement file.[link](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/requirements.txt): 
 
 
 ## How to run the project locally
@@ -47,3 +47,18 @@ I was interested in Django from the first time I searched about and after a litt
 4.   cd toki and execute python manage.py runserver.
 5.   that's it the site will be running.
 6.   note:-if you get any package errors, re-install them using the requirements.txt file.
+
+
+
+
+![](static/toki-screenshots/desktop/notesIndex.PNG) 
+![](static/toki-screenshots/desktop/addNotes.PNG) 
+![](static/toki-screenshots/desktop/editOrDelete.PNG) 
+![](static/toki-screenshots/desktop/userProfile.PNG) 
+![](static/toki-screenshots/desktop/adminUserLayout.PNG)
+<img src="static/toki-screenshots/desktop/signup.PNG" width="400">
+<img src="static/toki-screenshots/desktop/login.PNG" width="400">
+<img src="static/toki-screenshots/mobile/home.png" width="250">
+<img src="static/toki-screenshots/mobile/addNote.png" width="250">
+<img src="static/toki-screenshots/mobile/notesIndex.png" width="250">
+
