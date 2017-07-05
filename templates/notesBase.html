@@ -12,7 +12,7 @@
     {% block stylesheets %}
     <link rel="stylesheet" href="{% static 'toki/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'toki/bootstrap-theme.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'toki/theme.css' %}" />
+    
     {% endblock stylesheets %}
 </head>
 
@@ -79,7 +79,7 @@
     {% endif %}
     {% block head_extra %}
     {% endblock head_extra %}
-
+    <link rel="stylesheet" href="{% static 'toki/theme.css' %}" />
     <div class="container theme-showcase" role="main">
     {% block body %}
     {% endblock body %}
