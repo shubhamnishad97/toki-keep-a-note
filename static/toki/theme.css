@@ -1,6 +1,7 @@
 body {
   padding-top: 70px;
   padding-bottom: 30px;
+  background-color:  rgba(231, 231, 231, 0.35) !important;
 }
 
 .theme-dropdown .dropdown-menu {
