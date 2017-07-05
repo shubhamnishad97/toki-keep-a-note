@@ -26,6 +26,8 @@
           <h1>{% include "_brandname.html" %}</h1>
           <p >Keep a note. Keep hacking ideas.</p>
 	  <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
+    <button class="btn btn-primary" onclick="myFunction()">login without account</button>
+    <div id="details" style="color: black;"></div>
         </div>
         <div class="col-md-4 col-sm-4">
 
@@ -62,6 +64,13 @@
 {% endblock container %}
 
 {% block scripts %}
+<script type="text/javascript">
+  function myFunction() {
+    $('#details').html("<span>username:fake@gmail.com</span><p>   </p><span>password:fake</span>");
+
+}
+</script>
+
 <script src="{% static 'site/js/site.js' %}"></script>
 {% endblock scripts %}
 
