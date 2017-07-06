@@ -26,7 +26,7 @@ I was interested in Django from the first time I searched about and after a litt
 ## Things I Learned
 
 *   Working with a MVC or you can say MTV.
-*   By doing this project I can to know how Django works and what power does it has.
+*   By doing this project I came to know how Django works and what powers does it has.
 *   integrating differnt packages into a single project
 *   Database operations on a RDBMS
 *   hosting and configuring the project on pythonanwhere.com
