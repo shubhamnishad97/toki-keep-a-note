@@ -6,12 +6,14 @@ Toki is a simple note taking Django project. It was developed to act as a Hands-
 
 ##### 
 
+project link: http://shubhamnishad97.pythonanywhere.com/
+
 I was interested in Django from the first time I searched about and after a little investigation I choose Django as the base for this project.
 
 ## Features of Toki - keep a Note
 
-*   customize notes using the markdown editor.You dont need to know markdown the editor will help you.
-*   Save, Update, Delete notes
+*   customize notes using the markdown editor.You dont need to know markdown, the editor will help you.
+*   You can Rename, Save, Update, Delete notes.
 *   support for code blocks and highlighting
 *   Fully responsive. use any device and always find the best layout.
 
