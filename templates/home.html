@@ -25,8 +25,12 @@
         <div class="col-md-8 col-sm-8">
           <h1>{% include "_brandname.html" %}</h1>
           <p >Keep a note. Keep hacking ideas.</p>
-	  <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
+    {% if not user.is_authenticated %}      
+    <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a>
     <button class="btn btn-primary" onclick="myFunction()">login without account</button>
+    {% else %}
+    <a class="btn btn-primary" href="{% url 'notes:index' %}">Notes</a>
+    {% endif %}
     <div id="details" style="color: black;"></div>
         </div>
         <div class="col-md-4 col-sm-4">
@@ -73,4 +77,3 @@
 
 <script src="{% static 'site/js/site.js' %}"></script>
 {% endblock scripts %}
-
