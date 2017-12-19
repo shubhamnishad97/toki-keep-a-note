@@ -6,7 +6,7 @@ Toki is a simple note taking Django project. It was developed to act as a Hands-
 
 ##### 
 
-project link: http://shubhamnishad97.pythonanywhere.com/
+project link: http://toki1.pythonanywhere.com/
 
 I was interested in Django from the first time I searched about and after a little investigation I choose Django as the base for this project.
 
