@@ -1,12 +1,10 @@
 # toki-keep-a-note
-a simple note taking app made with Django.
+A simple note taking app made with Django. http://toki1.pythonanywhere.com/
 ##### 
 
 Toki is a simple note taking Django project. It was developed to act as a Hands-on and increase my experience with a MVC framework(MTV as in the case of Django).
 
 ##### 
-
-project link: http://toki1.pythonanywhere.com/
 
 I was interested in Django from the first time I searched about and after a little investigation I choose Django as the base for this project.
 
@@ -43,13 +41,16 @@ I was interested in Django from the first time I searched about and after a litt
 
 ## How to run the project locally
 
-1.   make sure you have python,pip and virtualenv installed.
-2.   make a virtualenv and download the repo inside it.(you can skip the virtualenv part if you like).
-3.   activate the virtualenv. I have already included the packages in the repo along with db.
-4.   cd toki and execute python manage.py runserver.
-5.   that's it the site will be running.
-6.   note:-if you get any package errors, re-install them using the requirements.txt file.
+Download the [zip](https://github.com/shubhamnishad97/toki-keep-a-note/archive/master.zip) or Clone this repository:
+`git clone https://github.com/shubhamnishad97/toki-keep-a-note.git`
 
+Install the dependencies by simply executing:
+`pip install -r requirements.txt`
+
+Run this command to start the app:
+`python manage.py runserver`
+
+Visit `127.0.0.1:8000` on your web browser and don't forget to give me some feedback.
 
 
 
@@ -63,4 +64,7 @@ I was interested in Django from the first time I searched about and after a litt
 <img src="static/toki-screenshots/mobile/home.png" width="250">
 <img src="static/toki-screenshots/mobile/addNote.png" width="250">
 <img src="static/toki-screenshots/mobile/notesIndex.png" width="250">
+
+
+### [LICENSE](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/LICENSE)
 
