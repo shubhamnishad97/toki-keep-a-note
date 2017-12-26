@@ -1,4 +1,4 @@
-# toki-keep-a-note
+# toki-keep-a-note   [![Build Status](https://travis-ci.org/shubhamnishad97/toki-keep-a-note.svg?branch=master)](https://travis-ci.org/shubhamnishad97/toki-keep-a-note)
 A simple note taking app made with Django. http://toki1.pythonanywhere.com/
 ##### 
 
