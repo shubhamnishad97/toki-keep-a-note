@@ -56,6 +56,8 @@ Visit `127.0.0.1:8000` on your web browser and don't forget to give me some feed
 
 
 
+## Screenshots
+
 ![](static/toki-screenshots/desktop/notesIndex.PNG) 
 ![](static/toki-screenshots/desktop/addNotes.PNG) 
 ![](static/toki-screenshots/desktop/editOrDelete.PNG) 
@@ -65,5 +67,5 @@ Visit `127.0.0.1:8000` on your web browser and don't forget to give me some feed
 <img src="static/toki-screenshots/desktop/login.PNG" width="400">
 
 
-### LICENSE [MIT](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/LICENSE)
 
+## License [MIT](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/LICENSE)
