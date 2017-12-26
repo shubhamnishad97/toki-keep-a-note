@@ -2,7 +2,7 @@
 A simple note taking app made with Django. http://toki1.pythonanywhere.com/
 ##### 
 
-Toki is a simple note taking Django project. It was developed to act as a Hands-on and increase my experience with a MVC framework(MTV as in the case of Django).
+Toki is a simple note taking Django project. It was developed to act as a Hands-on and to increase my experience with a MVC framework(MTV as in the case of Django).
 
 ##### 
 
