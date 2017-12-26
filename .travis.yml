@@ -1,0 +1,23 @@
+#   A basic travis.yml boilerplate for Django projects
+#
+#   The set-up assumes a postgreSQL database.
+#
+#   Replace the following variables in the code:
+# * your_project_settings
+# * your_github_username
+# * your_repo
+
+language: python
+
+python:
+  - 3.6
+
+env:
+  - DJANGO=1.10.6
+
+install:
+  - pip install -r requirements.txt
+  - pip install django==$DJANGO --quiet
+
+script:
+  - python manage.py test
