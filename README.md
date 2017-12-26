@@ -8,6 +8,8 @@ Toki is a simple note taking Django project. It was developed to act as a Hands-
 
 I was interested in Django from the first time I searched about and after a little investigation I choose Django as the base for this project.
 
+<img src="static/toki-screenshots/mobile/home.png" width="250">   <img src="static/toki-screenshots/mobile/addNote.png" width="250">   <img src="static/toki-screenshots/mobile/notesIndex.png" width="250">
+
 ## Features of Toki - keep a Note
 
 *   customize notes using the markdown editor.You dont need to know markdown, the editor will help you.
@@ -61,10 +63,7 @@ Visit `127.0.0.1:8000` on your web browser and don't forget to give me some feed
 ![](static/toki-screenshots/desktop/adminUserLayout.PNG)
 <img src="static/toki-screenshots/desktop/signup.PNG" width="400">
 <img src="static/toki-screenshots/desktop/login.PNG" width="400">
-<img src="static/toki-screenshots/mobile/home.png" width="250">
-<img src="static/toki-screenshots/mobile/addNote.png" width="250">
-<img src="static/toki-screenshots/mobile/notesIndex.png" width="250">
 
 
-### [LICENSE](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/LICENSE)
+### LICENSE [MIT](https://github.com/shubhamnishad97/toki-keep-a-note/blob/master/LICENSE)
 
